@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "bootstrap": "5.3.8",
     "hanami-assets": "^2.2.1"
   }
 }
