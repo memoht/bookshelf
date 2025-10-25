@@ -19,3 +19,7 @@
 
 # Local .env file
 .env.local
+
+#MacOS
+.keep
+.DS_Store
