@@ -15,3 +15,7 @@
 
 # Logs
 /log
+
+
+# Local .env file
+.env.local
