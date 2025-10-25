@@ -1,0 +1,17 @@
+# Bundler config
+/.bundle
+
+# Node modules
+/node_modules
+
+# Generated (pre-compilation) assets
+/app/assets/builds
+
+# Compiled assets
+/public
+
+# Data for docker-run services
+/data
+
+# Logs
+/log
