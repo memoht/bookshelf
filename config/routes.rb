@@ -6,5 +6,6 @@ module Bookshelf
     root to: "home.index"
     get "/books", to: "books.index", as: :books
     get "/books/:id", to: "books.show"
+    get "/books/new", to: "books.new"
   end
 end
