@@ -3,6 +3,10 @@
 module Bookshelf
   module Repos
     class BookRepo < Bookshelf::DB::Repo
+      def get(id)
+        books.by_pk(id).one!
+      end
+
       def all_by_title(page:, per_page:)
         books
           .order(books[:title].asc)
