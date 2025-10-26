@@ -13,4 +13,3 @@ module Bookshelf
     end
   end
 end
-g
