@@ -8,8 +8,20 @@
     <%= stylesheet_tag "app" %>
 
   </head>
-  <body>
-    <%= yield %>
+  <body class="d-flex flex-column h-100">
+    <% if flash[:alert] %>
+      <div class="alert alert-primary rounded-0" role="alert">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+    <% if flash[:notice] %>
+      <div class="alert alert-info rounded-top" role="alert">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
     <footer class="position-fixed bottom-0 w-100">
       <%= render "navbar" %>
     </footer>
