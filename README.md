@@ -12,9 +12,14 @@ Bookshelf app built by following [Hanami 2.x tutorial](https://guides.hanamirb.o
 
 
 
+# Notes
+- Database migrations: https://guides.hanamirb.org/v2.2/database/migrations/
+
 # Attributions
 This project is based on the [Hanami 2.x tutorial](https://guides.hanamirb.org/v2.0/tutorials/bookshelf/). All credits go to the Hanami team for creating the tutorial and the framework.
 
-+ Bookshelf image from [Library icons created by Good Ware - Flaticon](https://www.flaticon.com/free-icons/library)
++ **Bookshelf image from Library icons created by Good Ware - Flaticon:** https://www.flaticon.com/free-icons/library
 
-+ Font in logo from [Google Fonts - Outfit](https://fonts.google.com/specimen/Outfit?preview.text=Bookshelf)
++ **Google Fonts - Outfit:** https://fonts.google.com/specimen/Outfit?preview.text=Bookshelf
+
++ **Using UUIDs columns with Hanami:** https://medium.com/@rodrigopk/using-uuid-columns-with-hanami-7208f824bb77
