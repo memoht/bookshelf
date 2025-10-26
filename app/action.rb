@@ -3,6 +3,7 @@
 
 require "hanami/action"
 require "dry/monads"
+require "rom"
 
 module Bookshelf
   class Action < Hanami::Action
