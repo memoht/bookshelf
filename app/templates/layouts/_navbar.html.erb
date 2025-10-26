@@ -1,0 +1,15 @@
+<nav class="navbar bg-primary navbar-expand-lg">
+  <div class="container-fluid">
+    <%= link_to('bookshelf', routes.path(:root), class: 'navbar-brand fw-medium text-white') %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <li class="nav-item">
+          <%= link_to('books', routes.path(:books), class: 'nav-link') %>
+        </li>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -10,6 +10,9 @@
   </head>
   <body>
     <%= yield %>
+    <footer class="position-fixed bottom-0 w-100">
+      <%= render "navbar" %>
+    </footer>
     <%= javascript_tag "app" %>
   </body>
 </html>
