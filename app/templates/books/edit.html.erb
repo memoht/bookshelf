@@ -1,0 +1,35 @@
+<!-- app/templates/books/edit.html.erb -->
+
+<h1>Book Editor</h1>
+
+<%= form_for :book, routes.path(:update_book, id: book[:id]), method: :patch do |f| %>
+  <div class="mb-3">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :author %>
+    <%= f.text_field :author, class: "form control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :category %>
+    <%= f.select :category, categories, class: "form-control"  %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :format %>
+    <%= f.select :format, formats, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :isbn %>
+    <%= f.text_field :isbn, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= f.submit "Submit", class: "btn btn-outline-primary" %>
+  </div>
+<% end %>
+
