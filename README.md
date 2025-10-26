@@ -1,5 +1,7 @@
 # Bookshelf app
 
+![alt: logo for bookshelf app](https://github.com/memoht/bookshelf/blob/main/app/assets/images/logo-bookshelf.svg)
+
 Bookshelf app built by following [Hanami 2.x tutorial](https://guides.hanamirb.org/v2.0/tutorials/bookshelf/)
 
 ## My setup
