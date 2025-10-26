@@ -11,6 +11,11 @@ module Bookshelf
         books.changeset(:create, attributes).commit
       end
 
+      def update(id, attributes)
+        books.by_pk(id).update(attributes)
+        get(id)
+      end
+
       def all_by_title(page:, per_page:)
         books
           .order(books[:title].asc)
