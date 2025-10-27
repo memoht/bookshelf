@@ -5,8 +5,8 @@ module Bookshelf
     class BookRepo < Bookshelf::DB::Repo
 
       # Enums
-      Categories = Types::Strict::String.enum('fiction', 'nonfiction', 'reference').freeze
-      Formats = Types::Strict::String.enum('hardcover', 'paperback', 'ebook', 'audiobook').freeze
+      Categories = Types::Strict::String.default('fiction').enum('fiction', 'nonfiction', 'reference').freeze
+      Formats = Types::Strict::String.default('paperback').enum('hardcover', 'paperback', 'ebook', 'audiobook').freeze
 
       def get(id)
         books.by_pk(id).one!
