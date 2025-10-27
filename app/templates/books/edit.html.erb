@@ -15,12 +15,12 @@
 
   <div class="mb-3">
     <%= f.label :category %>
-    <%= f.select :category, categories, class: "form-control"  %>
+    <%= f.select :category, categories.map { |c| [c, c] }, class: "form-control" %>
   </div>
 
   <div class="mb-3">
     <%= f.label :format %>
-    <%= f.select :format, formats, class: "form-control" %>
+    <%= f.select :format, formats.map { |f| [f, f] }, class: "form-control" %>
   </div>
 
   <div class="mb-3">
