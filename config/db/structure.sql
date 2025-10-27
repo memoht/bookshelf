@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 9itoYr36d49FY2G1VKrk61b0Nl1fVIAE1PTeTvlc72gBaXV878qIhUgLeR58W1E
+\restrict 5swuCQZrL2n3W6k1EzYDlHlqzI2mzxrm5cjQ6yZ5ejg1ShYjwqN3vVfeltac19j
 
 -- Dumped from database version 17.6 (Postgres.app)
 -- Dumped by pg_dump version 17.6 (Postgres.app)
@@ -33,29 +33,6 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA public;
 COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
 
 
---
--- Name: book_categories; Type: TYPE; Schema: public; Owner: -
---
-
-CREATE TYPE public.book_categories AS ENUM (
-    'fiction',
-    'nonfiction',
-    'reference'
-);
-
-
---
--- Name: book_formats; Type: TYPE; Schema: public; Owner: -
---
-
-CREATE TYPE public.book_formats AS ENUM (
-    'hardcover',
-    'paperback',
-    'ebook',
-    'audiobook'
-);
-
-
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -68,8 +45,6 @@ CREATE TABLE public.books (
     id uuid DEFAULT public.uuid_generate_v4() NOT NULL,
     title text NOT NULL,
     author text NOT NULL,
-    category public.book_categories DEFAULT 'fiction'::public.book_categories NOT NULL,
-    format public.book_formats DEFAULT 'paperback'::public.book_formats NOT NULL,
     isbn text
 );
 
@@ -103,9 +78,10 @@ ALTER TABLE ONLY public.schema_migrations
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 9itoYr36d49FY2G1VKrk61b0Nl1fVIAE1PTeTvlc72gBaXV878qIhUgLeR58W1E
+\unrestrict 5swuCQZrL2n3W6k1EzYDlHlqzI2mzxrm5cjQ6yZ5ejg1ShYjwqN3vVfeltac19j
 
 SET search_path TO "$user", public;
 
 INSERT INTO schema_migrations (filename) VALUES
-('20251025210135_create_books.rb');
+('20251025210135_create_books.rb'),
+('20251027172423_book_enums_redux.rb');
