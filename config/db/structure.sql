@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 5swuCQZrL2n3W6k1EzYDlHlqzI2mzxrm5cjQ6yZ5ejg1ShYjwqN3vVfeltac19j
+\restrict i4hKbXB5DcgbEuJ52ZgsnPbN0GRuamSr8eSyZOIo38lciev1rmKHEsEkdM5DjRZ
 
 -- Dumped from database version 17.6 (Postgres.app)
 -- Dumped by pg_dump version 17.6 (Postgres.app)
@@ -45,7 +45,9 @@ CREATE TABLE public.books (
     id uuid DEFAULT public.uuid_generate_v4() NOT NULL,
     title text NOT NULL,
     author text NOT NULL,
-    isbn text
+    isbn text,
+    category text DEFAULT 'fiction'::text NOT NULL,
+    format text DEFAULT 'paperback'::text NOT NULL
 );
 
 
@@ -78,10 +80,11 @@ ALTER TABLE ONLY public.schema_migrations
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 5swuCQZrL2n3W6k1EzYDlHlqzI2mzxrm5cjQ6yZ5ejg1ShYjwqN3vVfeltac19j
+\unrestrict i4hKbXB5DcgbEuJ52ZgsnPbN0GRuamSr8eSyZOIo38lciev1rmKHEsEkdM5DjRZ
 
 SET search_path TO "$user", public;
 
 INSERT INTO schema_migrations (filename) VALUES
 ('20251025210135_create_books.rb'),
-('20251027172423_book_enums_redux.rb');
+('20251027172423_book_enums_redux.rb'),
+('20251027175336_reintroduce_book_enums.rb');
