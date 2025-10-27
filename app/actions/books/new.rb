@@ -8,8 +8,8 @@ module Bookshelf
 
         def handle(request, response)
             response.render view,
-              categories: book_repo.categories,
-              formats: book_repo.formats
+              categories: book_repo.class::Categories.values,
+              formats: book_repo.class::Formats.values
         end
       end
     end

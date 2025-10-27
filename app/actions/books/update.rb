@@ -25,8 +25,8 @@ module Bookshelf
             response.flash.now[:alert] = "Could not update book"
             response.render edit,
               book: request.params[:book].merge(id: request.params[:id]),
-              categories: book_repo.categories,
-              formats: book_repo.formats
+              categories: book_repo.class::Categories.values,
+              formats: book_repo.class::Formats.values
           end
         end
       end

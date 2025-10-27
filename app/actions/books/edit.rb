@@ -10,8 +10,8 @@ module Bookshelf
 
           response.render view,
             book: book,
-            categories: book_repo.categories,
-            formats: book_repo.formats
+            categories: book_repo.class::Categories.values,
+            formats: book_repo.class::Formats.values
         end
       end
     end
