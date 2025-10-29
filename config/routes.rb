@@ -10,5 +10,11 @@ module Bookshelf
     post "/books", to: "books.create", as: :create_book
     get "/books/:id/edit", to: "books.edit", as: :edit_book
     patch "/books/:id", to: "books.update", as: :update_book
+
+    slice :api, at: "/api" do
+      get "/books", to: "books.index"
+      get "/books/:id", to: "books.show"
+      post "/books", to: "books.create"
+    end
   end
 end
