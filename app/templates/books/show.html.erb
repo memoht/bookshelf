@@ -19,7 +19,7 @@
   <div class="col-5">
     <% if book.isbn %>
       <div class="d-flex flex-column align-items-center justify-content-center h-100">
-        <p>ISBN: <%= book.isbn %></p>
+        <p>ISBN: <%= book.formatted_isbn %></p>
         <%= barcode.html_safe %>
       </div>
     <% end %>
