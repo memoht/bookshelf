@@ -34,11 +34,11 @@ module Bookshelf
       end
 
       def by_author(author)
-        books.where(author: author)
+        books.by_author(author)
       end
 
       def by_year(year)
-        where { publication_date.year =~ year }
+        books.by_year(year)
       end
 
     end
