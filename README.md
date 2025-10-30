@@ -29,3 +29,5 @@ This project is based on the [Hanami 2.x tutorial](https://guides.hanamirb.org/v
 ### Project Gems
 
 + **Barkick | Barcodes made easy:** https://github.com/ankane/barkick
++ **RQRCode | A simple and efficient QR code generator for Ruby:** https://github.com/whomwah/rqrcode
++ **Barby | A generic interface for barcodes in Ruby:** https://github.com/toretore/barby
