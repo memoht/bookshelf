@@ -8,3 +8,10 @@
     </tr>
   <% end %>
 </table>
+
+<% if book.isbn %>
+  <div class="isbn-section">
+    <p>ISBN: <%= book.isbn %></p>
+    <%= barcode.html_safe %>
+  </div>
+<% end %>
