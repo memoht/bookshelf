@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict i4hKbXB5DcgbEuJ52ZgsnPbN0GRuamSr8eSyZOIo38lciev1rmKHEsEkdM5DjRZ
+\restrict Hv7cb5YNUTOyAiefPBXmKmJeTwZPbHfq5yO7h0QivaaXws6rdoSUx75r6ERU88U
 
 -- Dumped from database version 17.6 (Postgres.app)
 -- Dumped by pg_dump version 17.6 (Postgres.app)
@@ -47,7 +47,8 @@ CREATE TABLE public.books (
     author text NOT NULL,
     isbn text,
     category text DEFAULT 'fiction'::text NOT NULL,
-    format text DEFAULT 'paperback'::text NOT NULL
+    format text DEFAULT 'paperback'::text NOT NULL,
+    publication_date date
 );
 
 
@@ -80,11 +81,12 @@ ALTER TABLE ONLY public.schema_migrations
 -- PostgreSQL database dump complete
 --
 
-\unrestrict i4hKbXB5DcgbEuJ52ZgsnPbN0GRuamSr8eSyZOIo38lciev1rmKHEsEkdM5DjRZ
+\unrestrict Hv7cb5YNUTOyAiefPBXmKmJeTwZPbHfq5yO7h0QivaaXws6rdoSUx75r6ERU88U
 
 SET search_path TO "$user", public;
 
 INSERT INTO schema_migrations (filename) VALUES
 ('20251025210135_create_books.rb'),
 ('20251027172423_book_enums_redux.rb'),
-('20251027175336_reintroduce_book_enums.rb');
+('20251027175336_reintroduce_book_enums.rb'),
+('20251029200731_add_publication_date_to_books.rb');

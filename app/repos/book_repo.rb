@@ -21,6 +21,10 @@ module Bookshelf
         get(id)
       end
 
+      def all
+        books.to_a
+      end
+
       def all_by_title(page:, per_page:)
         books
           .order(books[:title].asc)
@@ -28,6 +32,15 @@ module Bookshelf
           .per_page(per_page)
           .to_a
       end
+
+      def by_author(author)
+        books.where(author: author)
+      end
+
+      def by_year(year)
+        where { publication_date.year =~ year }
+      end
+
     end
   end
 end

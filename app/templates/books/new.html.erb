@@ -28,6 +28,11 @@
     <%= f.text_field :isbn, class: "form-control" %>
   </div>
 
+  <div class="mb-3">
+    <%= f.label :publication_date %>
+    <%= f.date_field :publication_date, class: "form-control"  %>
+  </div>
+
   <div>
     <%= f.submit "Create", class: "btn btn-outline-primary" %>
   </div>
