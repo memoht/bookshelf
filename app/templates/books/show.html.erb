@@ -1,11 +1,10 @@
 <!-- app/templates/books/show.html.erb -->
 
-<h1><%= book.title %></h1>
-
-<p><%= book.author %></p>
-
-<p><%= book.category %></p>
-
-<p><%= book.format %></p>
-
-<p><%= book.isbn %></p>
+<table class="rows table table-striped">
+  <% book.attributes.sort_by(&:first).to_h.each do |key, value| %>
+    <tr>
+      <td class="col-sm-2 fw-light"><%= key.downcase %></td>
+      <td class="col-sm-10"><%= value.to_s %></td>
+    </tr>
+  <% end %>
+</table>

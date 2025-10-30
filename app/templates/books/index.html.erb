@@ -10,9 +10,10 @@
         <div class="card" style="width: 16rem;">
           <img src="<%= asset_url("img-placeholder-cover.png") %>">
           <div class="card-body">
-            <h5 class="card-title mb-0"><%= book[:title] %></h5>
+            <h5 class="card-title mb-0"><%= link_to book.title, routes.path(:show_book, id: book[:id]) %></h5>
             <p class="card-text"><%= book[:author] %></p>
-            <%= link_to "Edit", routes.path(:edit_book, id: book[:id]) %>
+            <%= link_to "Edit", routes.path(:edit_book, id: book[:id]), class: "btn btn-outline-primary" %>
+            <hr/>
             <%= book.inspect %>
           </div>
         </div>
