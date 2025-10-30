@@ -15,6 +15,7 @@ Bookshelf app built by following [Hanami 2.x tutorial](https://guides.hanamirb.o
 ## Notes
 
 + Database migrations: <https://guides.hanamirb.org/v2.2/database/migrations/>
++ ISBN 10 and 13 format: https://bookscouter.com/blog/isbn-10-vs-isbn-13-the-difference/
 
 ### Attributions
 
