@@ -12,7 +12,7 @@ module Bookshelf
             required(:category).filled(:string)
             required(:format).filled(:string)
             required(:publication_date).filled(:date)
-            optional(:isbn).maybe(:string)
+            optional(:isbn).maybe(:string, format?: /\A\d{10}(\d{3})?\z/)
           end
         end
 

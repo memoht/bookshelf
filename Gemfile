@@ -16,6 +16,10 @@ gem "puma"
 gem "rake"
 gem "pg"
 
+# app specific gems
+gem 'barby'
+gem "rqrcode", "~> 3.0"
+
 group :development do
   gem "hanami-webconsole", "~> 2.2"
 end
