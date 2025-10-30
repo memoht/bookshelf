@@ -12,6 +12,8 @@ module Bookshelf
             required(:author).filled(:string)
             required(:category).filled(:string)
             required(:format).filled(:string)
+            required(:publication_date).filled(:date)
+            optional(:isbn).maybe(:string)
           end
         end
 
