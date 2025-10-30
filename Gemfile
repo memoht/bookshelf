@@ -16,6 +16,9 @@ gem "puma"
 gem "rake"
 gem "pg"
 
+# app specific gems
+gem "barkick"
+
 group :development do
   gem "hanami-webconsole", "~> 2.2"
 end
