@@ -13,3 +13,7 @@
 #
 #   categories = Hanami.app["relations.categories"]
 #   categories.insert(title: "General")
+
+book_repo = Hanami.app["repos.book_repo"]
+book_repo.create(title: "Practical Object-Oriented Design", author: "Sandi Metz", isbn: "9780134456478", category: "reference", format: "paperback", publication_date: Date.new(2018, 8, 22))
+book_repo.create(title: "Test Driven Development", author: "Kent Beck", isbn: "9780321146533", category: "programming", format: "paperback", publication_date: Date.new(2002, 11, 8))
