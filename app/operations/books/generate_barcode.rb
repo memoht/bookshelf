@@ -11,7 +11,7 @@ module Bookshelf
           return nil if digits.empty?
 
           barcode = Barby::Bookland.new(digits)
-          Barby::SvgOutputter.new(barcode).to_svg(margin: 10, height: 50)
+          Barby::SvgOutputter.new(barcode).to_svg(margin: 10, height: 100, xdim: 2)
         rescue ArgumentError
           nil
         end
