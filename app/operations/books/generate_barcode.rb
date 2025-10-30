@@ -3,13 +3,17 @@ module Bookshelf
     module Books
       class GenerateBarcode
         def call(isbn)
-          require "barby/barcode/ean_13"
+          require "barby"
+          require "barby/barcode/bookland"
           require "barby/outputter/svg_outputter"
 
-          # ISBN-13 uses EAN-13 format
-          barcode = Barby::EanThirteen.new(isbn.to_s.gsub(/[^0-9]/, ''))
+          digits = isbn.to_s.gsub(/[^0-9xX]/, '')
+          return nil if digits.empty?
 
+          barcode = Barby::Bookland.new(digits)
           Barby::SvgOutputter.new(barcode).to_svg(margin: 10, height: 50)
+        rescue ArgumentError
+          nil
         end
       end
     end
