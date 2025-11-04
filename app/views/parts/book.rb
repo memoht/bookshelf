@@ -16,7 +16,7 @@ module Bookshelf
 
         def open_library_cover_url
           return nil unless isbn
-          "https://covers.openlibrary.org/b/isbn/#{isbn}.jpg"
+          "https://covers.openlibrary.org/b/isbn/#{isbn}-L.jpg"
         end
 
         def formatted_isbn
