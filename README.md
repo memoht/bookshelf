@@ -16,7 +16,7 @@ Bookshelf app built by following [Hanami 2.x tutorial](https://guides.hanamirb.o
 
 + Database migrations: <https://guides.hanamirb.org/v2.2/database/migrations/>
 + ISBN 10 and 13 format: https://bookscouter.com/blog/isbn-10-vs-isbn-13-the-difference/
-+ Open Library Covers API: https://openlibrary.org/dev/docs/api/covers
++ Open Library Covers API: https://openlibrary.org/dev/docs/api/covers. Note: rate limiting is applied to this API, so the sample app only includes 3 book seeds.
 
 ### Attributions
 
@@ -33,3 +33,8 @@ This project is based on the [Hanami 2.x tutorial](https://guides.hanamirb.org/v
 + **Barkick | Barcodes made easy:** https://github.com/ankane/barkick
 + **RQRCode | A simple and efficient QR code generator for Ruby:** https://github.com/whomwah/rqrcode
 + **Barby | A generic interface for barcodes in Ruby:** https://github.com/toretore/barby
+
+### ToDo
+
++ [ ] Cache response from Open Library Covers API
++ [ ] Add search functionality
