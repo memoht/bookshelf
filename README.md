@@ -23,7 +23,7 @@ This project is based on the [Hanami 2.x tutorial](https://guides.hanamirb.org/v
 
 + **Bookshelf image from Library icons created by Good Ware - Flaticon:** <https://www.flaticon.com/free-icons/library>
 
-+ **Google Fonts - Outfit:** <https://fonts.google.com/specimen/Outfit?preview.text=Bookshelf>
++ **Google Fonts - Lexend:** <https://fonts.google.com/specimen/Lexend?preview.text=Bookshelf>
 
 + **Using UUIDs columns with Hanami:** <https://medium.com/@rodrigopk/using-uuid-columns-with-hanami-7208f824bb77>
 
