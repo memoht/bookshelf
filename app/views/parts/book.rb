@@ -14,6 +14,11 @@ module Bookshelf
           context.routes.path(:edit_book, id: id)
         end
 
+        def open_library_cover_url
+          return nil unless isbn
+          "https://covers.openlibrary.org/b/isbn/#{isbn}.jpg"
+        end
+
         def formatted_isbn
           return nil unless isbn
 

@@ -4,17 +4,15 @@
 
 <div class="container">
 
-  <div class="row row-cols g-4 mb-4 border-bottom pb-4">
+  <div class="row g-4 mb-4 border-bottom pb-4">
     <% books.each do |book| %>
-      <div class="col">
+      <div class="col-sm-6 col-md-4 mb-3">
         <div class="card" style="width: 16rem;">
-          <img src="<%= asset_url("img-placeholder-cover.png") %>">
+          <img src="<%= book.open_library_cover_url %>">
           <div class="card-body">
             <h5 class="card-title mb-0"><%= link_to book.title, routes.path(:show_book, id: book[:id]) %></h5>
             <p class="card-text"><%= book[:author] %></p>
             <%= link_to "Edit", routes.path(:edit_book, id: book[:id]), class: "btn btn-outline-primary" %>
-            <hr/>
-            <%= book.inspect %>
           </div>
         </div>
       </div>
