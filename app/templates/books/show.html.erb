@@ -1,5 +1,5 @@
 <!-- app/templates/books/show.html.erb -->
-<div class="row">
+<div class="row mt-5 py-3">
   <div class="col-7">
     <table class="rows table table-striped">
       <thead>
@@ -19,6 +19,7 @@
   <div class="col-5">
     <% if book.isbn %>
       <div class="d-flex flex-column align-items-center justify-content-center h-100">
+        <img src="<%= book.open_library_cover_url %>">
         <p>ISBN: <%= book.formatted_isbn %></p>
         <%= barcode.html_safe %>
       </div>
